@@ -92,7 +92,7 @@ function addFlavor(str, arr){
     return (arr);
 }
 
-addFlavor('Rainbow Sherbert', originalFlavors)
+addFlavor("Rainbow Sherbert", originalFlavors)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -107,7 +107,7 @@ Use the removeLastFlavor function below to do the following:
 
 function removeLastFlavor(arr){
 arr.pop();
-return (arr);
+return (arr)
 }
 
 removeLastFlavor(originalFlavors)
@@ -142,10 +142,16 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+
+
+function removeFlavorByName(arr, str){
+
+
+    arr.splice(str.indexOf(str,0));
+    return (arr)
 }
 
+removeFlavorByName(originalFlavors, "Rocky Road")
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -171,6 +177,7 @@ function filterByWord(/*your code here*/){
     /*your code here*/
 }
 
+filterByWord(originalFlavors, "Rocky Road")
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
