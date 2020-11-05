@@ -87,12 +87,13 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(str, arr){
+function addFlavor(arr, str){
     arr.unshift(str);
-    return (arr);
+    return arr;
 }
 
-addFlavor("Rainbow Sherbert", originalFlavors)
+
+addFlavor(originalFlavors, "Rainbow Sherbert")
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -106,7 +107,7 @@ Use the removeLastFlavor function below to do the following:
 */
 
 function removeLastFlavor(arr){
-arr.pop();
+ arr.pop();
 return (arr)
 }
 
@@ -146,12 +147,13 @@ Use the removeFlavorByName function below to do the following:
 
 function removeFlavorByName(arr, str){
 
-
-    arr.splice(str.indexOf(str));
-    return (arr)
+    const remVar = arr.indexOf(str);
+    arr.splice(remVar,1);
+    return arr;
 }
 
-removeFlavorByName(originalFlavors, "Rocky Road")
+// removeFlavorByName(originalFlavors, "Vanilla")
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -174,17 +176,15 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(arr, str){
-    const newArray = [];
-    
-    if ((arr.includes(str.indexOf(str))) === -1){
-        return "not a flavor"}
-       
-        arr.every(str.indexOf(str));
-        {newArray.push();    
-        return (newArray)}
-    }   
+    let HolidaySpecials = [];
+    for(let i = 0; i<arr.length; i++){
+        if((arr[i]).includes(str)){
+            HolidaySpecials.push(arr[i]);      
+        }
 
-
+    }
+        return (HolidaySpecials)
+    }
 
 filterByWord(originalFlavors, "Chocolate")
 
